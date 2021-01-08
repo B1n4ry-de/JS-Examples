@@ -1,0 +1,17 @@
+// Requirements:
+// https://github.com/B1n4ry-de/JS-Snippets --> GetCookieByName();
+
+// Event - DOMContentLoaded
+document.addEventListener("DOMContentLoaded", function(event) {
+  document.getElementById("divElement").scrollTop = GetCookieByName("CookieName");
+}
+
+// Event - Scroll 
+document.getElementById("divElement").addEventListener("scroll", function() {
+    const sPosition = document.getElementById("divElement").scrollTop;
+    document.cookie = "sPosition=" + sPosition.scrollTop;
+});
+
+// If you need X and Y Position you can use this:
+  const sPositionY = document.getElementById("divElement").scrollTop;
+  const sPositionX = document.getElementById("divElement").scrollLeft;
